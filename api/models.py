@@ -28,4 +28,4 @@ class Url(models.Model):
         verbose_name_plural = "Адреса"
 
     def get_short_url(self):
-        return BASE_URL + self.shorten
+        return self.shorten
