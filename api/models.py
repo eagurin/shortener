@@ -1,7 +1,5 @@
 from django.db import models
 
-from core.settings import BASE_URL
-
 from .utils import hashed
 
 
