@@ -9,7 +9,7 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-BASE_URL = os.environ.get("BASE_URL", "http://localhost:8000/")
+BASE_URL = os.environ.get("HOST", "http://localhost:8000/")
 
 SECRET_KEY = (os.environ.get("DJ_SECRET_KEY"),)
 
