@@ -20,6 +20,8 @@ class Url(models.Model):
     def save(self, *args, **kwargs):
         if not self.shorten:
             self.shorten = hashed()
+        while Url.objects.all().filter(shorten=self.shorten):
+            self.shorten = hashed()
         return super().save(*args, **kwargs)
 
     class Meta:

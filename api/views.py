@@ -9,8 +9,6 @@ from .serializers import UrlSerializer
 class UrlViewSet(viewsets.ModelViewSet):
     queryset = Url.objects.all()
     serializer_class = UrlSerializer
-    slug_url_kwarg = "shorten"
-    query_pk_and_slug = True
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)

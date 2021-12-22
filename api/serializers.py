@@ -16,4 +16,8 @@ class UrlSerializer(serializers.HyperlinkedModelSerializer):
             raise serializers.ValidationError(
                 "Cтрока обязательно должна начинаться с буквы"
             )
+        if Url.objects.all().filter(shorten=value):
+            raise serializers.ValidationError(
+                "Этот адрес уже занят!"
+            )
         return value
