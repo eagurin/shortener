@@ -1,8 +1,6 @@
-from hashlib import md5
+from django.db import models
 
 from core.settings import BASE_URL
-from django.core.exceptions import ValidationError
-from django.db import models
 
 from .utils import hashed
 
