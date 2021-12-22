@@ -8,5 +8,5 @@ router.register("_short", UrlViewSet)
 
 urlpatterns = [
     path("", include(router.urls)),
-    path("<str:shorten>/", root, name="root"),
+    path("<str:shorten>", root, name="root"),
 ]
