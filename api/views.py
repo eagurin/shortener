@@ -16,7 +16,7 @@ class UrlViewSet(viewsets.ModelViewSet):
         instance = serializer.save()
         return Response(
             {"shorten": request.build_absolute_uri(instance.get_short_url())},
-            status=status.HTTP_200_OK,
+            status=status.HTTP_201_CREATED,
         )
 
 
