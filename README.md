@@ -28,6 +28,7 @@ pip install -r requirements.txt
 ```sh
 python manage.py makemigrations
 python manage.py migrate
+python manage.py collectstatic
 ```
 Запуск репо локально:
 Чтобы увидеть демонстрацию, запустите облегченный сервер разработки Django, доступный на http://127.0.0.1:8000/ :
